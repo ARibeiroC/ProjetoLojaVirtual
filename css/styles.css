@@ -1,0 +1,228 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Calibri, sans-serif;
+}
+
+#corpoSite {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+#corpoSite header {
+  display: flex;
+  width: 100%;
+  height: 12vh;
+  background: white;
+  padding: 0.2rem 0.5rem;
+}
+#corpoSite header #logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 16vw;
+  height: 11vh;
+}
+@media (max-width: 768px) {
+  #corpoSite header #logo {
+    align-items: center;
+    justify-content: start;
+    width: 90vw;
+    border: 1px solid;
+  }
+}
+#corpoSite header #logo #logoImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8vw;
+  height: 100%;
+  overflow: hidden;
+}
+@media (max-width: 425px) {
+  #corpoSite header #logo #logoImg {
+    width: 15vw;
+  }
+}
+#corpoSite header #logo #logoImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid rgb(229, 107, 23);
+}
+#corpoSite header #logo p {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: #f5a672;
+  -webkit-text-stroke: 0.5px #E56B17;
+  width: 70%;
+  font-style: italic;
+}
+@media (max-width: 768px) {
+  #corpoSite header #logo p {
+    display: none;
+  }
+}
+#corpoSite header #checkMenu {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 10vw;
+}
+@media (max-width: 768px) {
+  #corpoSite header #checkMenu {
+    display: flex;
+    color: #e56b17;
+    font-weight: bolder;
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 425px) {
+  #corpoSite header #checkMenu {
+    width: 15vw;
+  }
+}
+#corpoSite header #menu {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 76%;
+  padding-top: 0.2rem;
+}
+@media (max-width: 768px) {
+  #corpoSite header #menu {
+    display: none;
+  }
+}
+#corpoSite header #menu a {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  width: 12vw;
+  text-decoration: none;
+  color: #e56b17;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 15px;
+  transition: 500ms;
+  text-align: center;
+  border: 1px solid transparent;
+}
+#corpoSite header #menu a.active, #corpoSite header #menu a:hover {
+  border-bottom: 1px solid #e56b17;
+  border-bottom-width: 5px;
+}
+#corpoSite header #checkCar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+  width: 5vw;
+  height: 100%;
+  transition: 1s;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: #e56b17;
+}
+@media (max-width: 768px) {
+  #corpoSite header #checkCar {
+    display: none;
+  }
+}
+#corpoSite header #checkCar .fas {
+  cursor: pointer;
+}
+#corpoSite #bk1 {
+  display: flex;
+  flex-direction: column;
+  background: url("../image/headerbg.jpg") no-repeat center;
+  background-size: cover;
+  height: 88vh;
+}
+#corpoSite #bk1 #Promo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 20%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(2px);
+  font-weight: bolder;
+  font-size: 2rem;
+  color: #e56b17;
+}
+#corpoSite #bk1 #cardProdutos {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  width: 100%;
+  height: 80%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  #corpoSite #bk1 #cardProdutos {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    height: auto;
+    padding: 0.5rem;
+  }
+}
+#corpoSite #bk1 #cardProdutos .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  width: 25%;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(1.5px);
+  padding: 3rem;
+}
+@media (max-width: 768px) {
+  #corpoSite #bk1 #cardProdutos .card {
+    width: 45%;
+    height: auto;
+    padding: 1rem;
+  }
+}
+@media (max-width: 425px) {
+  #corpoSite #bk1 #cardProdutos .card {
+    width: 100%;
+  }
+}
+#corpoSite #bk1 #cardProdutos .card .imgCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+#corpoSite #bk1 #cardProdutos .card .imgCard img {
+  max-width: 80%;
+}
+#corpoSite #bk1 #cardProdutos .card .DescriptionProd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: bold;
+}
+#corpoSite #bk1 #cardProdutos .card .DescriptionProd #preco {
+  color: #e56b17;
+}
+
+/*# sourceMappingURL=styles.css.map */

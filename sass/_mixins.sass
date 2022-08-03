@@ -1,0 +1,17 @@
+@import 'variable'
+
+@mixin reset
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: Calibri, sans-serif
+
+@mixin flex-align($align, $justify)
+    align-items: $align
+    justify-content: $justify
+
+@mixin breakpoint($breakpoint)
+    @media (max-width: $breakpoint)
+        @content
+
+

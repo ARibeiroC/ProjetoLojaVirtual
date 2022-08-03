@@ -1,0 +1,226 @@
+@import 'variable'
+@import 'mixins'
+
+*
+    @include reset
+
+body
+
+#corpoSite
+    display: flex
+    flex-direction: column
+
+    width: 100%
+    height: 100vh
+
+
+    header
+        display: flex
+
+        width: 100%
+        height: 12vh
+        background: white
+        padding: 0.2rem 0.5rem
+        
+
+        #logo
+            display: flex
+            @include flex-align(center, center)
+            gap: 0.5rem
+
+            width: 16vw
+            height: 11vh
+
+            //============= BREAKPOINTs ============//
+            @include breakpoint(768px)
+                @include flex-align(center, start)
+                width: 90vw
+                border: 1px solid
+
+            #logoImg
+                display: flex
+                @include flex-align(center, center)
+                width: 8vw
+                height: 100%
+                overflow: hidden
+
+                //============= BREAKPOINTs ============//
+                @include breakpoint(425px)
+                    width: 15vw
+
+
+                img
+                    width: 100%
+                    height: 100%
+                    border-radius: 50%
+                    border: 2px solid rgba(229, 107, 23,1 )
+
+            p
+                font-size: 2.5rem
+                font-weight: bolder
+                color: #f5a672
+                -webkit-text-stroke: 0.5px #E56B17
+                width: 70%
+                font-style: italic
+
+                //============= BREAKPOINTs ============//
+                @include breakpoint(768px)
+                    display: none
+
+
+
+        #checkMenu
+            display: none
+            @include flex-align(center, center)
+
+            width: 10vw
+            //============= BREAKPOINTs ============//
+            @include breakpoint(768px)
+                display: flex
+                color: #e56b17
+                font-weight: bolder
+                font-size: 1.2rem
+
+            @include breakpoint(425px)
+                width: 15vw
+
+
+        #menu
+            display: flex
+            @include flex-align(center, end)
+
+            width: 76%
+            padding-top: 0.2rem
+
+            //============= BREAKPOINTs ============//
+            @include breakpoint(768px)
+                display: none
+            
+            a   
+                display: flex
+                flex-wrap: wrap
+                @include flex-align(center, center)
+                height: 80%
+                width: 12vw
+                text-decoration: none
+                color: #e56b17
+                font-weight: bold
+                font-size: 1.1rem
+                border-radius: 15px
+                transition: 500ms
+                text-align: center
+                border: 1px solid transparent
+
+            a.active, a:hover
+                border-bottom: 1px solid#e56b17
+                border-bottom-width: 5px
+        
+        #checkCar
+            display: flex
+            @include flex-align(center, center)
+            padding: 1%
+            width: 5vw
+            height: 100%
+            transition: 1s
+            border-top-left-radius: 10px
+            border-top-right-radius: 10px
+            color: #e56b17
+
+            //============= BREAKPOINTs ============//
+            @include breakpoint(768px)
+                display: none
+
+            
+
+            .fas
+                cursor: pointer
+
+    #bk1
+        display: flex
+        flex-direction: column
+        background: url('../image/headerbg.jpg') no-repeat center
+        background-size: cover
+        height: 88vh
+
+        #Promo
+            display: flex
+            @include flex-align(center, center)
+
+            width: 100%
+            height: 20%
+            background: rgba(0, 0, 0,0.8 )
+            backdrop-filter: blur(2px)
+            font-weight: bolder
+            font-size: 2rem
+            color: #e56b17
+
+
+        #cardProdutos
+            display: flex
+            @include flex-align(center, space-around)
+            gap: 1rem
+
+            width: 100%
+            height: 80%
+            padding: 1rem
+            box-sizing: border-box
+
+            //============= BREAKPOINTs ============//
+            @include breakpoint(768px)
+                flex-direction: row
+                flex-wrap: wrap
+                gap: 1rem
+                width: 100%
+                height: auto
+                padding: 0.5rem
+
+            .card
+                display: flex
+                flex-direction: column
+                @include flex-align(center, start)
+
+                gap: 1rem
+
+                width: 25%
+                border-radius: 8px
+                background: rgba(0, 0, 0,0.8 )
+                backdrop-filter: blur(1.5px)
+                padding: 3rem
+                //============= BREAKPOINTs ============//
+                @include breakpoint(768px)
+                    width: 45%
+                    height: auto
+                    padding: 1rem
+
+                @include breakpoint(425px)
+                    width: 100%
+
+                .imgCard
+                    display: flex
+                    flex-direction: column
+                    @include flex-align(center, center)
+
+                    width: 100%
+                    height: auto
+
+                    @include breakpoint(768px)
+
+
+                    img
+                        max-width: 80%
+
+                .DescriptionProd
+                    display: flex
+                    flex-direction: column
+                    @include flex-align(center, center)
+
+                    width: 100%
+                    font-size: 1.2rem
+                    color: white
+                    font-weight: bold
+
+                    #preco
+                        color: #e56b17
+
+
+                    
