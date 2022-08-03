@@ -37,7 +37,7 @@ function inicializarLoja(){
         cardProduto.innerHTML += `
             <div class="card">
                 <div class="imgCard">
-                    <img src="../image/`+items[i].img+`" alt="Imagem do Produto">
+                    <img src="image/`+items[i].img+`" alt="Imagem do Produto">
                 </div>
                 <div class="DescriptionProd">
                     <p id="produto">`+items[i].nome+`</p>
