@@ -8,42 +8,51 @@
 #corpoSite {
   display: flex;
   flex-direction: column;
-  width: 100%;
   height: 100vh;
 }
 #corpoSite header {
   display: flex;
-  width: 100%;
-  height: 12vh;
+  height: 75px;
   background: white;
   padding: 0.2rem 0.5rem;
+}
+@media (max-width: 768px) {
+  #corpoSite header {
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 #corpoSite header #logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  width: 16vw;
-  height: 11vh;
+  height: 100%;
+  width: 30%;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   #corpoSite header #logo {
     align-items: center;
     justify-content: start;
-    width: 90vw;
   }
 }
 #corpoSite header #logo #logoImg {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 8vw;
-  height: 100%;
+  height: 90%;
+  width: 70px;
   overflow: hidden;
+}
+@media (max-width: 768px) {
+  #corpoSite header #logo #logoImg {
+    height: 80%;
+    width: 60px;
+  }
 }
 @media (max-width: 425px) {
   #corpoSite header #logo #logoImg {
-    width: 15vw;
+    height: 70%;
+    width: 50px;
   }
 }
 #corpoSite header #logo #logoImg img {
@@ -69,7 +78,6 @@
   display: none;
   align-items: center;
   justify-content: center;
-  width: 10vw;
 }
 @media (max-width: 768px) {
   #corpoSite header #checkMenu {
@@ -79,17 +87,22 @@
     font-size: 1.2rem;
   }
 }
+@media (max-width: 768px) {
+  #corpoSite header #checkMenu {
+    width: 50px;
+  }
+}
 @media (max-width: 425px) {
   #corpoSite header #checkMenu {
-    width: 15vw;
+    width: 50px;
   }
 }
 #corpoSite header #menu {
   display: flex;
   align-items: center;
   justify-content: end;
-  width: 76%;
   padding-top: 0.2rem;
+  width: 65%;
 }
 @media (max-width: 768px) {
   #corpoSite header #menu {
@@ -102,7 +115,8 @@
   align-items: center;
   justify-content: center;
   height: 80%;
-  width: 12vw;
+  width: 150px;
+  margin: 0 0.2rem;
   text-decoration: none;
   color: #e56b17;
   font-weight: bold;
@@ -110,19 +124,19 @@
   border-radius: 15px;
   transition: 500ms;
   text-align: center;
-  border: 1px solid transparent;
+  border-bottom: 1px solid #f82;
 }
-#corpoSite header #menu a.active, #corpoSite header #menu a:hover {
-  border-bottom: 1px solid #e56b17;
-  border-bottom-width: 5px;
+#corpoSite header #menu a:hover {
+  background: rgb(238, 116, 32);
+  color: #fff;
 }
 #corpoSite header #checkCar {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1%;
-  width: 5vw;
+  padding: 0.2rem;
   height: 100%;
+  width: 5%;
   transition: 1s;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -131,6 +145,7 @@
 @media (max-width: 768px) {
   #corpoSite header #checkCar {
     display: none;
+    color: #f82;
   }
 }
 #corpoSite header #checkCar .fas {

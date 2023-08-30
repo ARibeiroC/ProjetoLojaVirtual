@@ -8,42 +8,48 @@
     display: flex
     flex-direction: column
 
-    width: 100%
     height: 100vh
 
 
     header
         display: flex
 
-        width: 100%
-        height: 12vh
+        height: 75px
         background: white
         padding: 0.2rem 0.5rem
-        
+
+        //============= BREAKPOINTs ============//
+        @include breakpoint(768px)
+            @include flex-align(center, space-between)  
 
         #logo
             display: flex
             @include flex-align(center, center)
-            gap: 0.5rem
 
-            width: 16vw
-            height: 11vh
+            height: 100%
+            width: 30%
 
             //============= BREAKPOINTs ============//
-            @include breakpoint(1100px)
+            @include breakpoint(900px)
                 @include flex-align(center, start)
-                width: 90vw
 
             #logoImg
                 display: flex
                 @include flex-align(center, center)
-                width: 8vw
-                height: 100%
+                height: 90%
+                width: 70px
                 overflow: hidden
+                
+
+                //============= BREAKPOINTs ============//
+                @include breakpoint(768px)
+                    height: 80%
+                    width: 60px
 
                 //============= BREAKPOINTs ============//
                 @include breakpoint(425px)
-                    width: 15vw
+                    height: 70%
+                    width: 50px
 
 
                 img
@@ -61,7 +67,7 @@
                 font-style: italic
 
                 //============= BREAKPOINTs ============//
-                @include breakpoint(1100px)
+                @include breakpoint(768px)
                     display: none
 
 
@@ -70,35 +76,40 @@
             display: none
             @include flex-align(center, center)
 
-            width: 10vw
             //============= BREAKPOINTs ============//
-            @include breakpoint(1100px)
+            @include breakpoint(768px)
                 display: flex
                 color: #e56b17
                 font-weight: bolder
                 font-size: 1.2rem
 
+            @include breakpoint(768px)
+                width: 50px
+
             @include breakpoint(425px)
-                width: 15vw
+                width: 50px
 
 
         #menu
             display: flex
             @include flex-align(center, end)
 
-            width: 76%
             padding-top: 0.2rem
+            width: 65%
+
 
             //============= BREAKPOINTs ============//
-            @include breakpoint(1100px)
+            @include breakpoint(768px)
                 display: none
             
             a   
                 display: flex
                 flex-wrap: wrap
                 @include flex-align(center, center)
+
                 height: 80%
-                width: 12vw
+                width: 150px
+                margin: 0 0.2rem
                 text-decoration: none
                 color: #e56b17
                 font-weight: bold
@@ -106,26 +117,28 @@
                 border-radius: 15px
                 transition: 500ms
                 text-align: center
-                border: 1px solid transparent
+                border-bottom: 1px solid $title-color-default
 
-            a.active, a:hover
-                border-bottom: 1px solid#e56b17
-                border-bottom-width: 5px
+            a:hover
+                background: rgba(238,116,32)
+                color: $text-color-white
         
         #checkCar
             display: flex
             @include flex-align(center, center)
-            padding: 1%
-            width: 5vw
+            padding: 0.2rem
+
             height: 100%
+            width: 5%
             transition: 1s
             border-top-left-radius: 10px
             border-top-right-radius: 10px
             color: #e56b17
 
             //============= BREAKPOINTs ============//
-            @include breakpoint(1100px)
+            @include breakpoint(768px)
                 display: none
+                color: #f82
 
             
 
@@ -163,7 +176,7 @@
             box-sizing: border-box
 
             //============= BREAKPOINTs ============//
-            @include breakpoint(1100px)
+            @include breakpoint(768px)
                 flex-direction: row
                 flex-wrap: wrap
                 gap: 1rem
@@ -184,7 +197,7 @@
                 backdrop-filter: blur(1.5px)
                 padding: 3rem
                 //============= BREAKPOINTs ============//
-                @include breakpoint(1100px)
+                @include breakpoint(768px)
                     width: 45%
                     height: auto
                     padding: 1rem
@@ -200,7 +213,7 @@
                     width: 100%
                     height: auto
 
-                    @include breakpoint(1100px)
+                    @include breakpoint(768px)
 
 
                     img
